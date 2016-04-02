@@ -5,19 +5,23 @@
 
   function StateConfig($stateProvider, $urlRouterProvider) {
     $stateProvider
-
-    .state('home', {
-      templateUrl: "./html/general/home.html",
-      controller: 'HomeCtrl',
+    .state('landing', {
+      templateUrl: "./html/general/landing.html",
+      controller: 'LandingCtrl',
+      abstract: true,
+      controllerAs: "Landing"
+    })
+    .state('landing.Home',{
+      url: '/',
+      templateUrl: '/html/general/home.html',
+      controller: "PageCtrl",
       controllerAs: "Home"
     })
-    .state('home.landing',{
-      url: '/',
-      templateUrl: '/html/general/landing.html'
-    })
-    .state('home.about',{
+    .state('landing.About',{
       url: '/about',
-      templateUrl: '/html/general/about.html'
+      templateUrl: '/html/general/about.html',
+      controller: "PageCtrl",
+      controllerAs: "About"
     })
     $urlRouterProvider.otherwise('/');
   };

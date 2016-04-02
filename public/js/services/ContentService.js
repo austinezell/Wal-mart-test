@@ -1,12 +1,12 @@
 (function() {
   'use strict';
   angular.module("testWM")
-  .service("ContentSerivce", ContentSerivce);
+  .service("ContentService", ContentService);
 
-  ContentSerivce.$inject = ["$http"];
+  ContentService.$inject = ["$http"];
 
-  function ContentSerivce(){
-    this.getPage = (location) => $http.get(`/content/${location}`);
+  function ContentService($http){
+    this.getContent = (location) => $http.get(`/content/${location}`);
   }
 
 }());
