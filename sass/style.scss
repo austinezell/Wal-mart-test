@@ -15,6 +15,7 @@ $shadow: rgb(45, 44, 44);
   width: 100%;
 }
 
+
 .vertical-table-cell {
   display: table-cell;
   height: 100%;
@@ -119,12 +120,13 @@ nav {
   }
 }
 
-.about{
+.container.about{
   background-color: white;
   border: 1px solid $shadow;
   box-shadow: -5px 5px 10px $shadow;
 }
 .page{
+  background-image: url('../stairway.jpg');
   height: calc(100vh - 50px);
   width: 100vw;
   position: relative;
@@ -132,12 +134,15 @@ nav {
   padding-top: 50px;
 }
 .container {
+  background-color: rgba(255,255,255,0.7);
   height: calc(100vh - 50px);
+  text-align: center;
   width: 90%;
   margin: 0 auto;
+
 }
 
-.slide.ng-enter, .slide.ng-enter-active, .slide.ng-leave-active, .slide.ng-leave {
+.landing-animation.ng-enter, .landing-animation.ng-enter-active, .landing-animation.ng-leave-active, .landing-animation.ng-leave {
   position: absolute;
   top: 50px;
   left: 0;
@@ -145,34 +150,27 @@ nav {
   transition: all .5s ease-in-out;
 }
 
-.to-about.slide.ng-enter {
+.to-about.landing-animation.ng-enter {
   transform: translateX(100%);
 }
-.slide.ng-enter:not(.to-about) {
-  transform: translateX(0);
+.landing-animation.ng-enter:not(.to-about) {
   z-index: -100;
 }
 
-.slide.ng-enter-active:not(.to-about) {
-  transform: translateX(0);
-}
-.to-about.slide.ng-enter-active {
-  transform:translateX(0);
-}
-
-.slide.ng-leave {
+.to-about.landing-animation.ng-enter-active {
   transform:translateX(0);
 }
 
 
-.to-about.slide.ng-leave-active {
+
+.to-about.landing-animation.ng-leave-active {
   transform:translateX(0);
   z-index: 50;
 }
-.slide.ng-leave-active:not(.to-about) {
+.landing-animation.ng-leave-active:not(.to-about) {
   transform: translateX(100%);
 }
 
-.to-about.slide.ng-enter, .to-about.slide.ng-enter-active {
+.to-about.landing-animation.ng-enter, .to-about.landing-animation.ng-enter-active {
   z-index: 100;
 }
