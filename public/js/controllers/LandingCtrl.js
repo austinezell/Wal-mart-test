@@ -10,7 +10,7 @@
     $scope.$watch(
       ()=>$state.current.name,
       (current, previous)=>{
-        vm.toAbout = (current === "landing.History");
+        vm.toHistory = (current === "landing.History");
       })
     }
   })()

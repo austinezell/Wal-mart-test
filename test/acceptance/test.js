@@ -1,5 +1,4 @@
 'use strict'
-require('dotenv').load();
 
 let supertest = require('supertest');
 var app = require('../../app');
