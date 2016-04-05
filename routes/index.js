@@ -8,4 +8,6 @@ router.get('/', (req, res) => {
 });
 
 
+router.get('/ping', (req, res)=> res.send('pong'));
+
 module.exports = router;
