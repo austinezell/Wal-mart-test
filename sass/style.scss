@@ -24,52 +24,12 @@ body{
   height: 55px;
   position: relative;
   z-index: 11;
+  filter: invert(100%);
 }
 .logo-anchor{
   padding: 5px !important;
 }
 
-
-#login-modal.revealed{
-  z-index: 1000;
-  background-color: rgba(0,0,0,0.5);
-  .form-container{
-    height: 295px;
-    padding: 25px 0;
-  }
-}
-#login-modal.closing{
-  transition-delay: .5s;
-  .form-container{
-    transition-delay: 0s;
-  }
-}
-
-#login-modal {
-  z-index: -1000;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  position: fixed;
-  transition: all .2s;
-  background-color: transparent;
-  .form-container {
-    box-shadow: 5px 5px 10px black;
-    border-radius: 15px 0 15px 0;
-    display: inline-block;
-    position: relative;
-    height: 0px;
-    width: 250px;
-    overflow-y: hidden;
-    transition: all .5s;
-    transition-delay: .2s;
-    .button-dismiss {
-      position: absolute;
-      top: 0;
-      right: 0;
-    }
-  }
-}
 
 .top-bar{
   background-color: blue;
@@ -129,7 +89,6 @@ footer{
   right: 0;
   width: 80%;
   margin: 0 auto;
-
   .paragraph-container{
     padding: 20px;
     height: calc(100% - 200px);

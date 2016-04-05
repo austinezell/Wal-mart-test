@@ -1,9 +1,9 @@
 (function(){
   angular.module('testWM')
   .config(StateConfig)
-  StateConfig.$inject = ["$stateProvider", "$urlRouterProvider"]
+  StateConfig.$inject = ["$locationProvider", "$stateProvider", "$urlRouterProvider"]
 
-  function StateConfig($stateProvider, $urlRouterProvider) {
+  function StateConfig($locationProvider, $stateProvider, $urlRouterProvider) {
     $stateProvider
     .state('landing', {
       templateUrl: "./html/general/landing.html",
@@ -24,5 +24,7 @@
       controllerAs: "Page"
     })
     $urlRouterProvider.otherwise('/');
+
+    $locationProvider.html5Mode(true);
   };
 })()
