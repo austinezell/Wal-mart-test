@@ -17,11 +17,11 @@
       controller: "PageCtrl",
       controllerAs: "Home"
     })
-    .state('landing.About',{
+    .state('landing.History',{
       url: '/about',
       templateUrl: '/html/general/about.html',
       controller: "PageCtrl",
-      controllerAs: "About"
+      controllerAs: "History"
     })
     $urlRouterProvider.otherwise('/');
   };

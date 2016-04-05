@@ -1,5 +1,6 @@
 # testWM
 
-testWM for generic template. Has Google Material CSS, Angular Material/Animate/Aria/Messages/UI-Router
+testWM Test for Wal-Mart labs.
 
-Color scheme laid-out in /public/js/config/material.js and /sass/style.scss
+`export MONGO_URL` to environment (will default to localhost otherwise).
+`npm install` will install packages. `postinstall` script will run `bower i` and `gulp dev` to generate CSS and populate database.

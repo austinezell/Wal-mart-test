@@ -13,7 +13,7 @@ function createContent(){
     subtitle: "Welcome to this site!",
     paragraphs: ["Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta incidunt consequuntur tempore ipsa maiores molestias, placeat voluptatem nesciunt est rem molestiae aspernatur, suscipit nisi voluptates veritatis porro fugit eaque facilis."]
   },{
-    title: "About",
+    title: "History",
     subtitle: "Read all about us!",
     paragraphs: ["Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta incidunt consequuntur tempore ipsa maiores molestias, placeat voluptatem nesciunt est rem molestiae aspernatur, suscipit nisi voluptates veritatis porro fugit eaque facilis.",
     "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi vitae, iure autem. Esse dolorum sapiente, blanditiis explicabo quia harum iusto amet fugit doloribus! Eaque, tempora! Placeat ex enim minus labore?",
@@ -22,13 +22,13 @@ function createContent(){
   let promise = new Promise((resolve, reject)=> {
     for(let i = 0; i< pages.length; i++){
       Content.create(pages[i], err=>{
-        console.log(err || pages[i]);
-        if (i === pages.length-1) resolve()
+        console.log(err || "page created");
+        if (i === pages.length-1) resolve();
       })
     }
 
   })
-  promise.then((res)=>{
+  promise.then(res=>{
     mongoose.connection.close();
   })
   return

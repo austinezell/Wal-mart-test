@@ -118,8 +118,8 @@ body{
   box-shadow: 20px 20px 40px $shadow, -20px 20px 40px $shadow;
 }
 .page{
-  height: 100%;
   position: relative;
+  min-height: calc(100vh - 60px);
   z-index: 10;
 }
 
@@ -135,19 +135,42 @@ body{
     bottom: 0;
     width: 100%;
     font-size: 3rem;
-    text-align: left;
     color: white;
     left: 0;
     background-color: rgba(0, 0, 255, 0.8);
   }
 }
-
+footer{
+  background-color:blue;
+  height: 20px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 11;
+}
+.landing-animation{
+  height: 100%;
+}
+.about p::before {
+  content:"•";
+}
 .content {
-  background-color: rgba(255,255,255,0.7);
-  height: calc(100vh - 50px);
-  text-align: center;
-  width: 90%;
+  background-color: white;
+  text-align: left;
+  position: absolute;
+  height: calc(100% - 20px);
+  left: 0;
+  right: 0;
+  width: 80%;
   margin: 0 auto;
+  .paragraph-container{
+    padding: 20px;
+    p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+  }
 }
 .colors{
   height: 10px;
@@ -181,3 +204,5 @@ body{
 .navbar-right {
   float: right!important;
 }
+
+@import "_mediaQueries";

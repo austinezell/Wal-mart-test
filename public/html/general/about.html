@@ -1,10 +1,12 @@
 <div class="content about">
   <div class="banner">
     <h1>
-      {{About.name}}
+      {{History.name}}
     </h1>
   </div>
 
-  <p ng-repeat="paragraph in About.content.paragraphs track by $index">{{paragraph}}</p>
+  <div class="paragraph-container">
+    <p ng-repeat="paragraph in History.content.paragraphs track by $index">{{paragraph}}</p>
+  </div>
 
 </div>
