@@ -8,7 +8,7 @@ Test for Wal-Mart labs.
 ##Built on Node.js v5.8
 If you do not have node and npm install them from http://nodejs.org/
 
-`npm install` will install packages.
+Once you have them, run `npm install` from command line to install Node packages.
 `postinstall` script runs automatically to cover the rest of development procedure.
 (`postinstall`: `bower i` to install bower packages and `gulp dev` to generate CSS, HTML templates, and populate database.)
 

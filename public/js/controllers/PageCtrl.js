@@ -19,7 +19,13 @@
         vm.dataLoaded = true;
         vm.content = res.data
       }, err=>{
-        swal("Uh oh!", "Something went wrong with the database", "error")
+        dataLoaded = true;
+        vm.conent = {
+          title: "Error",
+          paragraphs: [
+            "Something went wrong getting the content from the database",
+            "Make sure the database is running and the content was loaded"
+        ]}
         console.error(err);
       })
     }
