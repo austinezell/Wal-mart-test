@@ -3,13 +3,14 @@ const sass = require('gulp-sass');
 const prefixer = require('gulp-autoprefixer');
 const clean = require('gulp-clean-css');
 const generateContent = require('./createContent');
+const jade = require('gulp-jade');
 
-gulp.task('default', ['sass', 'watch']);
+gulp.task('default', ['sass', 'jade', 'watch']);
 
 gulp.task('dev', ['sass', 'populate']);
 
 gulp.task('sass', function(done){
-  gulp.src('./sass/style.scss')
+  gulp.src('./src/sass/style.scss')
   .pipe(sass())
   .on('error', sass.logError)
   .pipe(prefixer({
@@ -21,10 +22,18 @@ gulp.task('sass', function(done){
   .on('end', done)
 });
 
+gulp.task("jade", function(done){
+  gulp.src('./src/jade/*.jade')
+  .pipe(jade())
+  .pipe(gulp.dest('./public/html/'))
+  .on('end', done)
+})
+
 gulp.task("populate", function(){
   return generateContent();
 })
 
 gulp.task('watch', function(){
-  gulp.watch('./sass/**/*.scss', ['sass'])
+  gulp.watch('./src/sass/**/*.scss', ['sass'])
+  gulp.watch('./src/jade/**/*.jade', ['jade'])
 })

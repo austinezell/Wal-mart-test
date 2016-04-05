@@ -1,0 +1,11 @@
+.content(ng-class="{'about': Page.name==='History'}")
+  .vertical-table(ng-if='!Page.dataLoaded')
+    .vertical-table-cell
+      img(src='./images/loading.gif', alt='Loading Circle until data is received')
+  div(ng-if='Page.dataLoaded')
+    .banner
+      .top-bar
+      h1 {{Page.name}}
+    .paragraph-container
+      h1 {{Page.content.subtitle}}
+      p(ng-repeat='paragraph in Page.content.paragraphs track by $index') {{paragraph}}
