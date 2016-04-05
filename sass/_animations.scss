@@ -1,0 +1,28 @@
+.landing-animation.ng-enter, .landing-animation.ng-enter-active, .landing-animation.ng-leave-active, .landing-animation.ng-leave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  transition: all .5s ease-in-out;
+}
+
+.to-about.landing-animation.ng-enter {
+  transform: translateX(100%);
+}
+.landing-animation.ng-enter:not(.to-about) {
+  z-index: -100;
+}
+
+.to-about.landing-animation.ng-enter-active {
+  transform:translateX(0);
+}
+.to-about.landing-animation.ng-leave-active {
+  transform:translateX(0);
+  z-index: 50;
+}
+.landing-animation.ng-leave-active:not(.to-about) {
+  transform: translateX(100%);
+}
+
+.to-about.landing-animation.ng-enter, .to-about.landing-animation.ng-enter-active {
+  z-index: 100;
+}

@@ -1,4 +1,10 @@
-<div class="container about">
-  <br><a href="" ui-sref="landing.Home">landing</a>
-  {{landing}}
+<div class="content about">
+  <div class="banner">
+    <h1>
+      {{About.name}}
+    </h1>
+  </div>
+
+  <p ng-repeat="paragraph in About.content.paragraphs track by $index">{{paragraph}}</p>
+
 </div>

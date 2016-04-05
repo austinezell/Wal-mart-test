@@ -1,4 +1,4 @@
-@import '_reset';
+@import '_reset', '_animations';
 $shadow: rgb(45, 44, 44);
 .vertical-table{
   display: table;
@@ -12,13 +12,12 @@ $shadow: rgb(45, 44, 44);
   width: 100%;
   vertical-align: middle;
 }
-html{
-  height: auto;
+body, html{
+  max-width: 100%;
+  overflow-x: hidden;
 }
 body{
-  max-width: 100vw;
-  height: auto;
-  overflow-x: hidden;
+  background-color: rgb(51, 115, 162);
 }
 .logo{
   height: 55px;
@@ -113,20 +112,37 @@ body{
   }
 }
 
-.container.about{
+.content.about{
   background-color: white;
   border: 1px solid $shadow;
-  box-shadow: -5px 5px 10px $shadow;
+  box-shadow: 20px 20px 40px $shadow, -20px 20px 40px $shadow;
 }
 .page{
-  background-color: rgb(51, 115, 162);
-  height: calc(100vh - 50px);
-  width: 100vw;
+  height: 100%;
   position: relative;
   z-index: 10;
-  padding-top: 50px;
 }
-.container {
+
+.banner{
+  height: 200px;
+  background-image: url('../images/sfggb.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  h1{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 3rem;
+    text-align: left;
+    color: white;
+    left: 0;
+    background-color: rgba(0, 0, 255, 0.8);
+  }
+}
+
+.content {
   background-color: rgba(255,255,255,0.7);
   height: calc(100vh - 50px);
   text-align: center;
@@ -150,35 +166,18 @@ body{
   background-color: yellow;
 }
 
-.landing-animation.ng-enter, .landing-animation.ng-enter-active, .landing-animation.ng-leave-active, .landing-animation.ng-leave {
-  position: absolute;
-  top: 50px;
-  left: 0;
-  right: 0;
-  transition: all .5s ease-in-out;
+.navbar-collapse.collapse {
+  display: block!important;
 }
 
-.to-about.landing-animation.ng-enter {
-  transform: translateX(100%);
-}
-.landing-animation.ng-enter:not(.to-about) {
-  z-index: -100;
+.navbar-nav>li, .navbar-nav {
+  float: left !important;
 }
 
-.to-about.landing-animation.ng-enter-active {
-  transform:translateX(0);
+.navbar-nav.navbar-right:last-child {
+  margin-right: -15px !important;
 }
 
-
-
-.to-about.landing-animation.ng-leave-active {
-  transform:translateX(0);
-  z-index: 50;
-}
-.landing-animation.ng-leave-active:not(.to-about) {
-  transform: translateX(100%);
-}
-
-.to-about.landing-animation.ng-enter, .to-about.landing-animation.ng-enter-active {
-  z-index: 100;
+.navbar-right {
+  float: right!important;
 }
