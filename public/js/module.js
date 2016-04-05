@@ -3,9 +3,7 @@
   angular.module('testWM', [
     'ui.router',
     'ngAnimate',
-    'ngMessages',
-    'ngAria',
-    'ngMaterial'
+    'ngMessages'
   ])
   .constant('localStorageKey', 'testWM-token')
 })()

@@ -1,11 +1,23 @@
-<nav class="md-primary">
-  <header class="title">
-    <a ui-sref="home.landing">REPLACETHISTITLE</a>
-  </header>
-  <ul class="nav-list">
-    <li ng-if="loggedIn"><a ng-click="logout()">LOGOUT</a></li>
-    <li ng-if"!loggedIn"><a href ng-click="open()">LOGIN</a></li>
-  </ul>
+<nav class="navbar">
+
+  <div class="row colors">
+    <div class="col-xs-3 red"></div>
+    <div class="col-xs-6 turquoise"></div>
+    <div class="col-xs-3 yellow"></div>
+  </div>
+  <div class="row nav-links">
+    <ul class="nav navbar-nav">
+      <li><a class="logo-anchor" ui-sref="landing.Home" href><img src="./images/circle.png" alt="image to represent logo" class="logo"></a></li>
+      <li class="dropdown">
+        <a href class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a ui-sref="landing.About" href>History</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href>FAQ</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
 </nav>
 
 <test-auth-modal></test-auth-modal>
