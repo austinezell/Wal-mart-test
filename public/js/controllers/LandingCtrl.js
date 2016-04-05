@@ -8,7 +8,7 @@
   function LandingCtrl($scope, $state){
     let vm = this;
     $scope.$watch(
-      ()=>$state.current.name,
+      ()=> $state.current.name,
       (current, previous)=>{
         vm.toHistory = (current === "landing.History");
       })
