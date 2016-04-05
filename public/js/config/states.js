@@ -13,15 +13,15 @@
     })
     .state('landing.Home',{
       url: '/',
-      templateUrl: '/html/general/home.html',
+      templateUrl: '/html/general/content.html',
       controller: "PageCtrl",
-      controllerAs: "Home"
+      controllerAs: "Page"
     })
     .state('landing.History',{
       url: '/about',
-      templateUrl: '/html/general/about.html',
+      templateUrl: '/html/general/content.html',
       controller: "PageCtrl",
-      controllerAs: "History"
+      controllerAs: "Page"
     })
     $urlRouterProvider.otherwise('/');
   };

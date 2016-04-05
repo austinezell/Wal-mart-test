@@ -6,7 +6,6 @@ const constants = require('../config/constants.js')
 /**
  * Module dependencies.
  */
-
 let app = require('../app');
 let debug = require('debug');
 let http = require('http');

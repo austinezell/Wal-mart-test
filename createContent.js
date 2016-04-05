@@ -5,8 +5,6 @@ const CONSTANTS = require('./config/constants');
 const mongoose = require('mongoose');
 mongoose.connect(CONSTANTS.MONGO_URL);
 
-
-
 function createContent(){
   let pages = [{
     title: "Home",

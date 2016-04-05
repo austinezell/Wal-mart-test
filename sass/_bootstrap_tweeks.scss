@@ -1,0 +1,49 @@
+.navbar-nav .open .dropdown-menu{
+  position: absolute;
+  background-color: white;
+}
+
+.nav>li>a:focus, .nav>li>a:hover, .nav .open>a, .nav .open>a:focus, .nav .open>a:hover{
+  background-color: inherit;
+}
+
+.nav-links {
+  padding-left: 100px;
+}
+.nav>li>a:focus, .nav>li>a:hover, .nav .open>a, .nav .open>a:focus, .nav .open>a:hover{
+  background-color: inherit;
+}
+
+.navbar {
+  background-color: blue;
+  max-height: 60px;
+  width: 100%;
+  margin-bottom: 0;
+  border: none;
+  top: 0;
+  border-radius: 0;
+  a {
+    transition: all .2s ease;
+    text-decoration: none;
+    color: white;
+    &:hover, &:active{
+      background-color: inherit !important;
+    }
+  }
+}
+
+.navbar-collapse.collapse {
+  display: block!important;
+}
+
+.navbar-nav>li, .navbar-nav {
+  float: left !important;
+}
+
+.navbar-nav.navbar-right:last-child {
+  margin-right: -15px !important;
+}
+
+.navbar-right {
+  float: right!important;
+}

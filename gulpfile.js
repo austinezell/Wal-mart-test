@@ -26,5 +26,5 @@ gulp.task("populate", function(){
 })
 
 gulp.task('watch', function(){
-  gulp.watch('./sass/style.scss', ['sass'])
+  gulp.watch('./sass/**/*.scss', ['sass'])
 })
