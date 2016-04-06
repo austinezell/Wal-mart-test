@@ -7,7 +7,7 @@ const jade = require('gulp-jade');
 
 gulp.task('default', ['sass', 'jade', 'watch']);
 
-gulp.task('dev', ['sass', 'populate']);
+gulp.task('dev', ['sass', 'populate', 'jade']);
 
 gulp.task('sass', function(done){
   gulp.src('./src/sass/style.scss')
