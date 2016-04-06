@@ -19,14 +19,13 @@
         vm.dataLoaded = true;
         vm.content = res.data
       }, err=>{
-        dataLoaded = true;
-        vm.conent = {
-          title: "Error",
+        vm.dataLoaded = true;
+        vm.content = {
+          subtitle: "Error",
           paragraphs: [
             "Something went wrong getting the content from the database",
-            "Make sure the database is running and the content was loaded"
+            "Make sure the database is running and it was properly populated"
         ]}
-        console.error(err);
       })
     }
 
