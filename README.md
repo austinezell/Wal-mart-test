@@ -16,5 +16,5 @@ Once you have them, run `npm install` from command line to install Node packages
 `npm start` will launch the server to run the application.
 
 For debugging purposes there are two tests, one to determine if server connection is established,
-One to test if the database contains the proper data.
+one to test if the database contains the proper data.
 `npm test` will run both tests.
