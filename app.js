@@ -31,7 +31,7 @@ app.all('/*', function(req, res, next) {
 
 const http = require('http');
 const port = constants.PORT;
-require('mongoose').createConnection(constants.MONGO_URL);
+require('mongoose').connect(constants.MONGO_URL);
 app.set('port', port);
 
 const server = http.createServer(app);

@@ -1,5 +1,7 @@
 "use strict";
 
+// function to generate dummy data;
+
 const Content = require('./models/ContentSchema');
 const CONSTANTS = require('./config/constants');
 const mongoose = require('mongoose');

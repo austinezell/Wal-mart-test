@@ -1,5 +1,6 @@
 @import '_reset', '_animations';
 $shadow: rgb(45, 44, 44);
+
 .vertical-table{
   display: table;
   height: 100%;
@@ -25,15 +26,18 @@ body, html{
   max-width: 100%;
   overflow-x: hidden;
 }
+
 body{
   background-color: rgb(51, 115, 162);
 }
+
 .logo{
   height: 55px;
   position: relative;
   z-index: 11;
   filter: invert(100%);
 }
+
 .logo-anchor{
   padding: 5px !important;
 }
@@ -77,6 +81,7 @@ body{
     background-color:rgba(51, 115, 162, 0.7);
   }
 }
+
 footer{
   background-color:blue;
   height: 20px;
@@ -85,9 +90,11 @@ footer{
   bottom: 0;
   z-index: 11;
 }
+
 .landing-animation{
   height: 100%;
 }
+
 .content {
   background-color: white;
   text-align: left;
@@ -113,6 +120,7 @@ footer{
     }
   }
 }
+
 .colors{
   height: 10px;
   >div{
@@ -123,9 +131,11 @@ footer{
 .red {
   background-color: red;
 }
+
 .turquoise {
   background-color: turquoise;
 }
+
 .yellow {
   background-color: yellow;
 }
