@@ -23,9 +23,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get("/", (req, res) => res.render("index"));
 app.use('/content', require('./routes/content'));
 app.use('/tests', require('./routes/tests'));
+// app.use("dist")
 
 // render index across all routes for single-page application
-app.all('/*', function(req, res, next) {
+app.use('/*', function(req, res, next) {
     res.render('index');
 });
 
