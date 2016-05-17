@@ -3,8 +3,7 @@ const webpack = require("webpack");
 
 module.exports = {
   entry: {
-    app: "./src/js/index.js",
-    vendor: ["angular", "angular-animate", "angular-ui-router"]
+    app: "./src/js/index.js"
   },
   output: {
     path: __dirname + '/public/dist//',
@@ -18,7 +17,6 @@ module.exports = {
     }]
   },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin("vendor", "vendor.bundle.js"),
     new webpack.optimize.UglifyJsPlugin({minimize: true})
   ]
 };

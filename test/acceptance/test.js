@@ -6,10 +6,10 @@ const CONSTANTS = require('../../config/constants');
 require('mongoose').connect(CONSTANTS.MONGO_URL);
 
 // test if server is running with simple ping.
-describe('GET /ping', ()=>{
+describe('GET /tests/ping', ()=>{
   it('responds with pong', (done)=>{
     supertest(app)
-    .get('/ping')
+    .get('/tests/ping')
     .set('Accept', 'application/json')
     .expect('pong')
     .end(done)
