@@ -1,9 +1,9 @@
 'use strict'
 
 const supertest = require('supertest');
-const app = require('../../app');
-const CONSTANTS = require('../../config/constants');
-require('mongoose').connect(CONSTANTS.MONGO_URL);
+const app = require('../app');
+const CONSTANTS = require('../config/constants');
+require('mongoose').createConnection(CONSTANTS.MONGO_URL);
 
 // test if server is running with simple ping.
 describe('GET /tests/ping', ()=>{
