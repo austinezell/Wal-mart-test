@@ -1,16 +1,15 @@
 'use strict';
 
-const constants = require('./config/constants.js')
 
 const express = require('express');
 const path = require('path');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
-
 const app = express();
 
+const constants = require('./config/constants.js')
 
-
+//declare middleware
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
