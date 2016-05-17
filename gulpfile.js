@@ -5,12 +5,30 @@ const clean = require('gulp-clean-css');
 const generateContent = require('./createContent');
 const jade = require('gulp-jade');
 
-gulp.task('default', ['sass', 'jade', 'watch']);
+gulp.task('default', ['sass', 'jade', 'watch', 'assets']);
 
-gulp.task('dev', ['sass', 'populate', 'jade']);
+gulp.task('dev', ['sass', 'populate', 'jade', 'assets']);
+
+const dir = {
+  src: {
+    sass: './src/sass/**/*.scss',
+    jade: './src/jade/**/*.jade',
+    assets: './src/assets/**/*'
+  },
+  out: {
+    css: './public/styles',
+    html: './public/',
+    assets: './public/'
+  }
+}
+
+gulp.task("assets", function(){
+  return gulp.src(dir.src.assets)
+  .pipe(gulp.dest(dir.out.assets))
+})
 
 gulp.task('sass', function(done){
-  gulp.src('./src/sass/style.scss')
+  gulp.src(dir.src.sass)
   .pipe(sass())
   .on('error', sass.logError)
   .pipe(prefixer({
@@ -18,14 +36,14 @@ gulp.task('sass', function(done){
     cascade: false
   }))
   .pipe(clean())
-  .pipe(gulp.dest('./public/styles'))
+  .pipe(gulp.dest(dir.out.css))
   .on('end', done)
 });
 
 gulp.task("jade", function(done){
-  gulp.src('./src/jade/*.jade')
+  gulp.src(dir.src.jade)
   .pipe(jade())
-  .pipe(gulp.dest('./public/html/'))
+  .pipe(gulp.dest(dir.out.html))
   .on('end', done)
 })
 
@@ -34,6 +52,6 @@ gulp.task("populate", function(){
 })
 
 gulp.task('watch', function(){
-  gulp.watch('./src/sass/**/*.scss', ['sass'])
-  gulp.watch('./src/jade/**/*.jade', ['jade'])
+  gulp.watch(dir.src.sass, ['sass'])
+  gulp.watch(dir.src.jade, ['jade'])
 })
