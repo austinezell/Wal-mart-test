@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title Test
+    link(rel='stylesheet', href='./bower_components/sweetalert/dist/sweetalert.css')
+    link(rel='stylesheet', href='./bower_components/font-awesome/css/font-awesome.min.css')
+    link(rel='stylesheet', href='./bower_components/bootstrap/dist/css/bootstrap.min.css')
+    link(rel='stylesheet', href='./styles/style.css')
+    base(href='/')
+    script(src='./bower_components/sweetalert/dist/sweetalert.min.js')
+    script(src='./bower_components/jquery/dist/jquery.min.js')
+    script(src='./bower_components/bootstrap/dist/js/bootstrap.min.js')
+    script(src='./bower_components/angular/angular.min.js')
+    script(src='./bower_components/angular-ui-router/release/angular-ui-router.js')
+    script(src='./bower_components/angular-animate/angular-animate.min.js')
+    script(src='./dist/bundle.js', charset='utf-8')
+  body(ng-app='testWM')
+    ng-include(src="'html/nav.html'")
+    ui-view
+    ng-include(src="'html/footer.html'")

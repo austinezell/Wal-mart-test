@@ -20,14 +20,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 //declares routers
-app.get("/", (req, res) => res.render("index"));
+// app.get("/", (req, res) => res.render("index"));
 app.use('/content', require('./routes/content'));
 app.use('/tests', require('./routes/tests'));
 
 // render index across all routes for single-page application
-app.all('/*', function(req, res, next) {
-    res.render('index');
-});
+// app.all('/*', function(req, res, next) {
+//     res.render('index');
+// });
 
 const http = require('http');
 const port = constants.PORT;
