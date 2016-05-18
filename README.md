@@ -15,7 +15,7 @@ Once you have them, run `npm install` from command line to install Node packages
 `postinstall` script runs automatically to cover the rest of development procedure.
 (`postinstall`: `bower i` to install bower packages, `gulp dev` to generate CSS, HTML templates, move images from **src** to **public** and populate database, and `webpack` to bundle the JavaScript.)
 
-`npm start` will launch the server to run the application.
+`npm start` will launch the server to run the application. Simply go to `localhost:3000` in your browser.
 
 For debugging purposes there are two tests, one to determine if server connection is established,
 one to test if the database contains the proper data.
