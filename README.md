@@ -1,4 +1,4 @@
-# testWM
+## testWM
 
 Test for Wal-Mart labs.
 
@@ -7,7 +7,7 @@ Test for Wal-Mart labs.
 
 Use the command `mongod` from a terminal to ensure MongoDB is running
 
-##Built on Node.js v5.8
+###Built on Node.js v5.8
 If you do not have node and npm install them from http://nodejs.org/
 
 Once you have them, run `npm install` from command line to install Node packages.
